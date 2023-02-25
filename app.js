@@ -3,7 +3,6 @@ import express from 'express'
 import { mongoDbConnection } from './src/config/mongodb'
 import usersRouter from './src/routes/usersRouter'
 // import postsRouter from './src/routes/postsRouter'
-
 const app = express()
 
 app.use(express.json())
@@ -23,7 +22,9 @@ app.use((request, response) => {
     })
 })
 
-//=== SERVIDOR ====//
-app.listen(3000, () => {
-  console.log('servidor ejecutando en el puerto 3000')
-})
+// //=== SERVIDOR ====//
+// app.listen(3000, () => {
+//   console.log('servidor ejecutando en el puerto 3000')
+// })
+
+export default app

@@ -1,7 +1,14 @@
 import mongoose from 'mongoose'
+import {
+  DB_HOSTNAME,
+  DB_NAME,
+  DB_PASSWORD,
+  DB_USERNAME
+} from './environment'
 
-const DB_NAME = 'BlogApp'
-const uri = `mongodb+srv://raf4q0:W3lc0m3-KDM1@kodemiadb.k9jabaq.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
+console.log(DB_HOSTNAME)
+
+const uri = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}/${DB_NAME}?retryWrites=true&w=majority`
 
 export const mongoDbConnection = async () => {
   try {
